@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Third Party Website - Chatbot Integration Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    .highlight-box {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .highlight-box h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+    }
+
+    .feature-card h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      margin: 20px 0;
+    }
+
+    .code-block code {
+      color: #a6e22e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Third Party Website Example</h1>
+    <p class="subtitle">This page demonstrates how the AI Assistant chatbot integrates seamlessly into any website</p>
+
+    <div class="content">
+      <p>
+        This is a sample third-party website showing how easy it is to add the AI Assistant chatbot to your existing site.
+        The chatbot appears as a floating button in the bottom-right corner and doesn't interfere with your website's design or functionality.
+      </p>
+
+      <p>
+        Look at the bottom-right corner of this page - you'll see a blue chat button with a lightning bolt icon.
+        Click it to start chatting with the AI assistant!
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Integration is Simple</h2>
+      <p>
+        To add this chatbot to your website, just include this single line of code before the closing &lt;/body&gt; tag:
+      </p>
+      <div class="code-block">
+        <code>&lt;script src="https://your-domain.com/embed.js"&gt;&lt;/script&gt;</code>
+      </div>
+      <p>
+        That's it! The chatbot will automatically appear and work perfectly with your existing website.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Key Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Non-Intrusive</h3>
+          <p>The chatbot sits quietly in the corner until users need it</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fully Responsive</h3>
+          <p>Works perfectly on desktop, tablet, and mobile devices</p>
+        </div>
+        <div class="feature-card">
+          <h3>No Dependencies</h3>
+          <p>Loads its own styles and scripts without affecting your site</p>
+        </div>
+        <div class="feature-card">
+          <h3>Customizable</h3>
+          <p>Easy to customize colors, messages, and behavior</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2 style="color: #333; margin-top: 40px; margin-bottom: 15px;">What You Can Do</h2>
+      <ul style="list-style-position: inside; color: #666;">
+        <li style="margin-bottom: 10px;">Send messages and get instant AI responses</li>
+        <li style="margin-bottom: 10px;">Add emojis to your messages for more expression</li>
+        <li style="margin-bottom: 10px;">React to messages with emoji reactions</li>
+        <li style="margin-bottom: 10px;">Toggle sound notifications on or off</li>
+        <li style="margin-bottom: 10px;">Clear chat history whenever you want</li>
+        <li style="margin-bottom: 10px;">Minimize and maximize the chat window easily</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Try It Now</h2>
+      <p>
+        The chatbot is already loaded on this page. Click the blue button in the bottom-right corner to start chatting!
+      </p>
+    </div>
+  </div>
+
+  <!-- CHATBOT EMBED CODE - THIS IS THE ONLY LINE YOU NEED TO ADD TO YOUR WEBSITE -->
+  <script src="/embed.js"></script>
+  <!-- END OF CHATBOT EMBED CODE -->
+</body>
+</html>
