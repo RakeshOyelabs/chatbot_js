@@ -1,10 +1,36 @@
+// Chatbot Widget Loader v1.0.0
 (function() {
   'use strict';
 
-  const CHATBOT_CONFIG = {
+  // Default configuration
+  const DEFAULT_CONFIG = {
     baseUrl: window.location.origin,
-    tailwindCDN: 'https://cdn.tailwindcss.com'
+    tailwindCDN: 'https://cdn.tailwindcss.com',
+    widgetId: 'chatbot-widget',
+    position: 'bottom-right', // 'bottom-right' or 'bottom-left'
+    theme: 'light', // 'light' or 'dark'
+    autoOpen: false,
+    version: '1.0.0',
+    onReady: null,
+    onOpen: null,
+    onClose: null,
+    onMessage: null,
+    onError: null
   };
+
+  // Merge default config with user config
+  const CHATBOT_CONFIG = {
+    ...DEFAULT_CONFIG,
+    ...(window.ChatbotConfig || {})
+  };
+
+  // Global error handler
+  function handleError(error, context) {
+    console.error(`[Chatbot Error] ${context}:`, error);
+    if (typeof CHATBOT_CONFIG.onError === 'function') {
+      CHATBOT_CONFIG.onError(error, context);
+    }
+  }
 
   function loadTailwind() {
     return new Promise((resolve, reject) => {

@@ -1,33 +1,121 @@
-# AI Assistant Chatbot Widget
+# AI Chatbot Widget
 
-A beautiful, embeddable chatbot widget built with HTML, Tailwind CSS, and JavaScript. Perfect for adding AI-powered chat functionality to any website.
+A lightweight, customizable chatbot widget that can be easily integrated into any website. Built with vanilla JavaScript and Tailwind CSS for maximum compatibility and performance.
 
 ## Features
 
-- Real-time messaging with AI responses
-- Emoji support and reactions
-- Sound notifications (toggle on/off)
-- Message timestamps
-- Read receipts
-- Responsive design
-- Easy one-line integration
-- No external dependencies required
+- 🚀 **Easy Integration**: Add with a single line of code
+- 🎨 **Customizable**: Change colors, position, and behavior
+- 🌓 **Themes**: Light and dark mode support
+- 📱 **Responsive**: Works on all device sizes
+- 🎵 **Sound Notifications**: Optional sound alerts for new messages
+- ⚡ **Fast**: Lightweight and optimized for performance
+- 🔌 **No Dependencies**: Works out of the box
 
-## Quick Start
+## Installation
 
-### Option 1: Use as Standalone Widget
+### Option 1: Direct Script Include (Easiest)
 
-Open `chatbot-widget.html` in your browser to see the chatbot in action.
-
-### Option 2: Embed in Your Website
-
-Add this single line of code before the closing `</body>` tag in your HTML:
+Add this code to your website's `<head>` section:
 
 ```html
-<script src="https://your-domain.com/embed.js"></script>
+<!-- Configuration (optional) -->
+<script>
+  window.ChatbotConfig = {
+    position: 'bottom-right',  // 'bottom-right' or 'bottom-left'
+    theme: 'light',           // 'light' or 'dark'
+    autoOpen: false,          // Open chat automatically
+    sound: true,              // Enable/disable sound
+    onReady: function() {
+      console.log('Chatbot is ready!');
+    },
+    onMessage: function(message) {
+      console.log('New message:', message);
+    }
+  };
+</script>
+
+<!-- Load the chatbot widget -->
+<script src="https://your-domain.com/embed.js" defer></script>
 ```
 
-That's it! The chatbot will automatically appear on your website.
+### Option 2: NPM Package (Coming Soon)
+
+```bash
+npm install @your-org/chatbot-widget
+```
+
+## Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| position | string | 'bottom-right' | Position of the chat widget |
+| theme | string | 'light' | Color theme ('light' or 'dark') |
+| autoOpen | boolean | false | Open chat automatically on page load |
+| sound | boolean | true | Enable/disable sound notifications |
+| onReady | function | null | Called when widget is loaded |
+| onOpen | function | null | Called when chat is opened |
+| onClose | function | null | Called when chat is closed |
+| onMessage | function | null | Called on new messages |
+| onError | function | null | Called on errors |
+
+## JavaScript API
+
+Control the widget programmatically:
+
+```javascript
+// Open the chat
+window.ChatbotWidget?.open();
+
+// Close the chat
+window.ChatbotWidget?.close();
+
+// Toggle the chat
+window.ChatbotWidget?.toggle();
+
+// Send a message
+window.ChatbotWidget?.sendMessage('Hello!');
+
+// Update configuration
+window.ChatbotWidget?.updateConfig({
+  theme: 'dark',
+  position: 'bottom-left',
+  sound: false
+});
+```
+
+## Development
+
+### Prerequisites
+- Node.js 14+
+- npm or yarn
+
+### Setup
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Local Development
+```bash
+npm run dev
+```
+
+### Build for Production
+```bash
+npm run build
+```
+
+## Deployment
+
+1. Build the project: `npm run build`
+2. Deploy the contents of the `dist` directory to your web server
+3. Update the script URL in your integration code
+
+## License
+
+MIT
 
 ## Files Overview
 

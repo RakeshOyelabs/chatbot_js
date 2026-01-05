@@ -1,14 +1,42 @@
 {
-  "name": "vite-starter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "chatbot-widget",
+  "version": "1.0.0",
+  "description": "A lightweight, embeddable chatbot widget for websites",
   "type": "module",
+  "main": "dist/embed.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:prod": "vite build --mode production",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js"
   },
+  "keywords": [
+    "chatbot",
+    "widget",
+    "chat",
+    "ai",
+    "embed"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
   "devDependencies": {
-    "vite": "^5.4.2"
-  }
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "terser": "^5.44.1",
+    "vite": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chatbot-widget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chatbot-widget/issues"
+  },
+  "homepage": "https://github.com/yourusername/chatbot-widget#readme"
 }
