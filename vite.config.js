@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   build: {
+    outDir: 'dist',
     lib: {
       entry: resolve(__dirname, 'embed.js'),
       name: 'ChatbotWidget',
@@ -11,12 +12,9 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        // Ensure the global variable is accessible
         globals: {
           'chatbot-widget': 'ChatbotWidget',
         },
-        // Minify the output
-        compact: true,
       },
     },
     minify: 'terser',
