@@ -4,11 +4,11 @@
   "description": "A lightweight, embeddable chatbot widget for websites",
   "type": "module",
   "main": "dist/embed.js",
- "scripts": {
+"scripts": {
   "dev": "vite",
-  "build": "vite build",
+  "build": "vite build && cp index.html dist/",
   "preview": "vite preview",
-  "build:prod": "vite build --mode production",
+  "build:prod": "vite build --mode production && cp index.html dist/",
   "format": "prettier --write .",
   "lint": "eslint . --ext .js",
   "netlify-build": "npm install && npm run build"
